@@ -69,14 +69,24 @@ import UIKit
 	}
 }
 
-@objc extension UIApplication
+extension UIColor
+{
+	static var confetti: UIColor
+	{
+		[UIColor.red, .blue, .cyan, .green, .magenta, .purple, .orange, .yellow].randomElement()?
+			.withAlphaComponent(0.75) ?? .purple
+	}
+}
+
+extension UIApplication
 {
 	private static var oldMethod: IMP?
 	private static let originalSelector = #selector(sendEvent(_:))
 	private static let newSelector = #selector(sendEventNew(_:))
 	private static var tapIsShow = false
-	fileprivate static var tapColor: UIColor = .white.withAlphaComponent(0.5)
+	fileprivate static var tapColor: UIColor = .magenta.withAlphaComponent(0.5)
 	fileprivate static var tapSize: CGFloat = 32
+	fileprivate static var style = ShowTouches.Style.mono
 
 	private func tapDetectingChangeState()
 	{
@@ -137,6 +147,14 @@ import UIKit
 		   let touches = event.allTouches,
 		   let touch = touches.first
 		{
+			switch Self.style
+			{
+			case .mono:
+				Self.tapColor = Self.tapColor
+			case .confetti:
+				Self.tapColor = .confetti
+			}
+
 			switch touch.phase
 			{
 			case .began:
@@ -153,6 +171,12 @@ import UIKit
 
 class ShowTouches
 {
+	enum Style
+	{
+		case mono
+		case confetti
+	}
+
 	static var show: Bool = false
 	{
 		didSet
@@ -162,11 +186,31 @@ class ShowTouches
 		}
 	}
 
-	static func show(with color: UIColor, size: CGFloat)
+	@available(iOS 11.0, *)
+	static var automaticShow: Bool = false
+	{
+		didSet
+		{
+			NotificationCenter.default.addObserver(self,
+												   selector: #selector(capturedChange),
+												   name: UIScreen.capturedDidChangeNotification,
+												   object: nil)
+			self.capturedChange()
+		}
+	}
+
+	@objc @available(iOS 11.0, *)
+	static func capturedChange()
+	{
+		self.show = UIScreen.main.isCaptured && self.automaticShow
+	}
+
+	static func show(with color: UIColor, size: CGFloat, style: Style = .mono)
 	{
 		let app = UIApplication.shared
 		UIApplication.tapColor = color
 		UIApplication.tapSize = size
+		UIApplication.style = style
 		app.tapStartDetecting()
 	}
 }

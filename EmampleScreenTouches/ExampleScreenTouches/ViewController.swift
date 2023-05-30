@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  EmampleScreenTouches
+//  ExampleScreenTouches
 //
 //  Created by Jesus++ on 09.01.2023.
 //
@@ -12,7 +12,11 @@ class ViewController: UIViewController
 	override func viewDidLoad()
 	{
 		super.viewDidLoad()
-		ShowTouches.show(with: .magenta.withAlphaComponent(0.66), size: 44)
+		ShowTouches.show(with: .magenta.withAlphaComponent(0.66), size: 44, style: .confetti)
+		if #available(iOS 11.0, *)
+		{
+			ShowTouches.automaticShow = true
+		}
 	}
 
 	@IBAction func clickInfo(_ sender: Any)

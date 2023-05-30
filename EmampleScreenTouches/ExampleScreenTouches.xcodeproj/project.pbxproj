@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C1EE592296C3EF7004FC11A /* EmampleScreenTouches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmampleScreenTouches.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C1EE592296C3EF7004FC11A /* ExampleScreenTouches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleScreenTouches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1EE595296C3EF7004FC11A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C1EE599296C3EF7004FC11A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C1EE59C296C3EF7004FC11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,20 +41,21 @@
 			isa = PBXGroup;
 			children = (
 				5C1EE5A9296C3F72004FC11A /* ShowTouches.swift */,
-				5C1EE594296C3EF7004FC11A /* EmampleScreenTouches */,
+				5C1EE594296C3EF7004FC11A /* ExampleScreenTouches */,
 				5C1EE593296C3EF7004FC11A /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		5C1EE593296C3EF7004FC11A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C1EE592296C3EF7004FC11A /* EmampleScreenTouches.app */,
+				5C1EE592296C3EF7004FC11A /* ExampleScreenTouches.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C1EE594296C3EF7004FC11A /* EmampleScreenTouches */ = {
+		5C1EE594296C3EF7004FC11A /* ExampleScreenTouches */ = {
 			isa = PBXGroup;
 			children = (
 				5C1EE595296C3EF7004FC11A /* AppDelegate.swift */,
@@ -64,15 +65,15 @@
 				5C1EE5A0296C3EF8004FC11A /* LaunchScreen.storyboard */,
 				5C1EE5A3296C3EF8004FC11A /* Info.plist */,
 			);
-			path = EmampleScreenTouches;
+			path = ExampleScreenTouches;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5C1EE591296C3EF7004FC11A /* EmampleScreenTouches */ = {
+		5C1EE591296C3EF7004FC11A /* ExampleScreenTouches */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C1EE5A6296C3EF8004FC11A /* Build configuration list for PBXNativeTarget "EmampleScreenTouches" */;
+			buildConfigurationList = 5C1EE5A6296C3EF8004FC11A /* Build configuration list for PBXNativeTarget "ExampleScreenTouches" */;
 			buildPhases = (
 				5C1EE58E296C3EF7004FC11A /* Sources */,
 				5C1EE58F296C3EF7004FC11A /* Frameworks */,
@@ -82,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = EmampleScreenTouches;
+			name = ExampleScreenTouches;
 			productName = EmampleScreenTouches;
-			productReference = 5C1EE592296C3EF7004FC11A /* EmampleScreenTouches.app */;
+			productReference = 5C1EE592296C3EF7004FC11A /* ExampleScreenTouches.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,14 +96,14 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					5C1EE591296C3EF7004FC11A = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 5C1EE58D296C3EF7004FC11A /* Build configuration list for PBXProject "EmampleScreenTouches" */;
+			buildConfigurationList = 5C1EE58D296C3EF7004FC11A /* Build configuration list for PBXProject "ExampleScreenTouches" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C1EE591296C3EF7004FC11A /* EmampleScreenTouches */,
+				5C1EE591296C3EF7004FC11A /* ExampleScreenTouches */,
 			);
 		};
 /* End PBXProject section */
@@ -288,7 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmampleScreenTouches/Info.plist;
+				INFOPLIST_FILE = ExampleScreenTouches/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EmampleScreenTouches/Info.plist;
+				INFOPLIST_FILE = ExampleScreenTouches/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -337,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C1EE58D296C3EF7004FC11A /* Build configuration list for PBXProject "EmampleScreenTouches" */ = {
+		5C1EE58D296C3EF7004FC11A /* Build configuration list for PBXProject "ExampleScreenTouches" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C1EE5A4296C3EF8004FC11A /* Debug */,
@@ -346,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C1EE5A6296C3EF8004FC11A /* Build configuration list for PBXNativeTarget "EmampleScreenTouches" */ = {
+		5C1EE5A6296C3EF8004FC11A /* Build configuration list for PBXNativeTarget "ExampleScreenTouches" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C1EE5A7296C3EF8004FC11A /* Debug */,
